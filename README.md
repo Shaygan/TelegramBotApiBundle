@@ -58,6 +58,7 @@ shaygan_telegram_bot_api:
         path_prefix: ~ # you can add prefix, if your web site is not on the root
         update_receiver: shaygan.my_update_receiver # sample update receiver
 ```
+*note: Telegram do not support http, your site should have valid SSL (HTTPS).*
 
 ## Usage
 
