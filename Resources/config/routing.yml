@@ -1,0 +1,3 @@
+shaygan_telegram_bot_api_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ShayganTelegramBotApiBundle:Default:index }

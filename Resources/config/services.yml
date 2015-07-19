@@ -1,0 +1,4 @@
+services:
+    shaygan.telegram_bot_api:
+        class: Shaygan\TelegramBotApiBundle\TelegramBotApi
+        arguments: [@service_container]
