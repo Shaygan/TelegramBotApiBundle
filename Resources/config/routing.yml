@@ -1,3 +1,8 @@
-shaygan_telegram_bot_api_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: ShayganTelegramBotApiBundle:Default:index }
+shaygan_telegram_bot_api_webhook:
+    path:     /telegram-bot/setup-webhook/{secret}
+    defaults: { _controller: ShayganTelegramBotApiBundle:Default:setupWebhook, secret: null }
+    
+shaygan_telegram_bot_api_update:
+    path:     /telegram-bot/update/{secret}
+    defaults: { _controller: ShayganTelegramBotApiBundle:Default:update, secret: null }
+

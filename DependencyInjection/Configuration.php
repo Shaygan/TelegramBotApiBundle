@@ -24,7 +24,15 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
                 ->children()
-                ->scalarNode("token")->isRequired()->end()
+                    ->scalarNode("token")->isRequired()->end()
+                    ->scalarNode("bot_name")->end()
+                    ->arrayNode("webhook")
+                    ->children()
+                        ->scalarNode("domain")->end()
+                        ->scalarNode("path_prefix")->end()
+                        ->scalarNode("update_receiver")->defaultValue("shaygan.my_update_receiver")->end()
+                    ->end()
+                    ->end()
                 ->end();
 
 

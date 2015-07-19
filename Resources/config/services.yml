@@ -2,3 +2,6 @@ services:
     shaygan.telegram_bot_api:
         class: Shaygan\TelegramBotApiBundle\TelegramBotApi
         arguments: [@service_container]
+    shaygan.my_update_receiver:
+        class: Shaygan\TelegramBotApiBundle\UpdateReceiver\UpdateReceiver
+        arguments: [@service_container]
