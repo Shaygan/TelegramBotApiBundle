@@ -40,12 +40,23 @@ shaygan_telegram_bot_api:
     token: xxxxx:yyyyyyyyyyyyyyyyyyyy
 ```
 
-Then add the bundle's routing configuration in app/config/routing.yml :
+If you want to use web-hook, add the bundle's routing configuration in app/config/routing.yml :
 
 ```yaml
 shaygan_telegram_bot_api:
     resource: @ShyaganTelegramBotApi/Resources/config/routing.yml
 
+```
+And add your domain name, url prefix (if needed) and you update receiver service name (a sample update receiver is included) to the configuration file:
+```yaml
+# app/config/config.yml
+
+shaygan_telegram_bot_api:
+    #...
+    web_hook:
+        domain: example.com
+        path_prefix: ~ # you can add prefix, if your web site is not on the root
+        update_receiver: shaygan.my_update_receiver # sample update receiver
 ```
 
 ## Usage
