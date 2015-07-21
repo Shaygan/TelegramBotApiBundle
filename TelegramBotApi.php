@@ -21,4 +21,12 @@ class TelegramBotApi extends BotApi
         parent::__construct($token['token']);
     }
 
+    /**
+     * @param string $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+
 }
