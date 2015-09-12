@@ -33,9 +33,7 @@ class DefaultController extends Controller
 
     public function updateAction($secret, Request $request)
     {
-//        $data0 = $request->getContent();
-        $data0 = '{"update_id":8937330,
-"message":{"message_id":1314,"from":{"id":74083533,"first_name":"Iman","last_name":"Ghasrfakhri","username":"Ghasrfakhri"},"chat":{"id":74083533,"first_name":"Iman","last_name":"Ghasrfakhri","username":"Ghasrfakhri"},"date":1437309600,"text":"\/test"}}';
+        $data0 = $request->getContent();
 
         $data = json_decode($data0);
 
