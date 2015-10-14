@@ -23,7 +23,7 @@ class AppKernel extends Kernel
         $bundles = array(
             // ...
             // register the bundle here
-            new Shaygan\TelegramBotApiBundle(),
+            new Shaygan\TelegramBotApiBundle\ShayganTelegramBotApiBundle(),
         );
     }
 }
