@@ -4,6 +4,7 @@
     "description": "A simple wrapper for telegram-bot-api.",
     "keywords": ["telegram", "bot", "api", "telegram-bot-api", "php", "symfony2"],
     "homepage": "http://i-gh.ir",
+    "version": "dev", 
     "license": "MIT",
     "authors": [
         {
