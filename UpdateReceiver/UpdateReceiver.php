@@ -2,8 +2,8 @@
 
 namespace Shaygan\TelegramBotApiBundle\UpdateReceiver;
 
+use Shaygan\TelegramBotApiBundle\TelegramBotApi;
 use Shaygan\TelegramBotApiBundle\Type\Update;
-use Symfony\Component\DependencyInjection\Container;
 
 /**
  *
@@ -12,35 +12,33 @@ use Symfony\Component\DependencyInjection\Container;
 class UpdateReceiver implements UpdateReceiverInterface
 {
 
-    private $container;
+    private $config;
+    private $telegramBotApi;
 
-    public function __construct(Container $container)
+    public function __construct(TelegramBotApi $telegramBotApi, $config)
     {
-        $this->container = $container;
+        $this->telegramBotApi = $telegramBotApi;
+        $this->config = $config;
     }
 
     public function handleUpdate(Update $update)
     {
-        $cmd = $update->message->chat;
-        $config = $this->container->getParameter("shaygan_telegram_bot_api.config");
+        $message = json_decode(json_encode($update->message), true);
 
-        switch ($cmd) {
+        switch ($message['text']) {
             case "/about":
-            case "/about@{$config['bot_name']}":
+            case "/about@{$this->config['bot_name']}":
                 $text = "I'm a samble Telegram Bot";
                 break;
             case "/help":
-            case "/help@{$config['bot_name']}":
+            case "/help@{$this->config['bot_name']}":
             default :
                 $text = "Command List:\n";
                 $text .= "/about - About this bot\n";
                 $text .= "/help - show this help message\n";
                 break;
         }
-        $this->container->get("shaygan.telegram_bot_api")
-                ->sendMessage(
-                        $update->message->chat->id, $text
-        );
-    }
 
+        $this->telegramBotApi->sendMessage($message['chat']['id'], $text);
+    }
 }
