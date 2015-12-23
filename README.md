@@ -44,7 +44,7 @@ If you want to use web-hook, add the bundle's routing configuration in app/confi
 
 ```yaml
 shaygan_telegram_bot_api:
-    resource: @ShyaganTelegramBotApi/Resources/config/routing.yml
+    resource: @ShyaganTelegramBotApiBundle/Resources/config/routing.yml
 
 ```
 And add your domain name, url prefix (if needed) and you update receiver service name (a sample update receiver is included) to the configuration file:
@@ -53,7 +53,7 @@ And add your domain name, url prefix (if needed) and you update receiver service
 
 shaygan_telegram_bot_api:
     #...
-    web_hook:
+    webhook:
         domain: example.com
         path_prefix: ~ # you can add prefix, if your web site is not on the root
         update_receiver: shaygan.my_update_receiver # sample update receiver
