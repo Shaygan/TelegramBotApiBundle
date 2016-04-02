@@ -8,7 +8,7 @@ A symfony2 wrapper bundle for  [Telegram Bot API](https://core.telegram.org/bots
 Via Composer
 
 ``` bash
-$ composer require shaygan/telegram-bot-api-bundle
+$ composer require shaygan/telegram-bot-api-bundle @dev
 ```
 
 Edit your app/AppKernel.php to register the bundle in the registerBundles() method as above:
