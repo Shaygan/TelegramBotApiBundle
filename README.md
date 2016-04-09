@@ -74,10 +74,10 @@ Wherever you have access to the service container :
 
 ?>
 ```
+## Next...
+Please refer to Telegram Bot API official document for getting infomration about available methods and other informations:
 
-## Testing
-
-Not implemented yet
+[Telegram Bot API Document](https://core.telegram.org/bots/api)
 
 ## License
 
