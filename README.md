@@ -75,8 +75,19 @@ Wherever you have access to the service container :
 ?>
 ```
 ## Next...
+
 Please refer to [Telegram Bot API Official Document](https://core.telegram.org/bots/api) for getting infomration about available methods and other informations:
 
+## Troubleshooting
+
+If you did all the configurations correctly but still getting errors (Http error 500) even on getMe method, it might be because of SSL Verification. Please make sure you have up-to-date CA root certificate bundle to be used with cURL.
+
+You can configure you CA root certificate bundle by:
+
+ 1. Downloading up-to-date cacert.pem file from cURL website and
+ 2. Setting a path to it in your php.ini file, e.g. on Windows:
+
+ `curl.cainfo=c:\php\cacert.pem`
 
 ## License
 
