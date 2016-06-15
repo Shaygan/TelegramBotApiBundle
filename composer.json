@@ -16,7 +16,7 @@
     ],
     "require": {
         "symfony/framework-bundle": ">=2.2",
-        "telegram-bot/api": "^2.0" 
+        "telegram-bot/api": "2.*" 
     },
     "autoload": {
         "psr-0": {
