@@ -2,9 +2,9 @@
     "name": "shaygan/telegram-bot-api-bundle",
     "type": "symfony-bundle",
     "description": "A simple wrapper for telegram-bot-api.",
-    "keywords": ["telegram", "bot", "api", "telegram-bot-api", "php", "symfony2"],
+    "keywords": ["telegram", "bot", "api", "telegram-bot-api", "php", "symfony", "symfony2", "symfony3"],
     "homepage": "http://i-gh.ir",
-    "version": "dev", 
+    "version": "dev",
     "license": "MIT",
     "authors": [
         {
@@ -16,7 +16,8 @@
     ],
     "require": {
         "symfony/framework-bundle": ">=2.2",
-        "telegram-bot/api": ">=2.2.4" 
+        "telegram-bot/api": ">=2.2.4",
+        "longman/telegram-bot": "*"
     },
     "autoload": {
         "psr-0": {

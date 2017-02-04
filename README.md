@@ -1,7 +1,7 @@
 ShayganTelegramBotApiBundle
 ===================
 
-A symfony2 wrapper bundle for  [Telegram Bot API](https://core.telegram.org/bots/api) with some tiny feature.
+A symfony wrapper bundle for  [Telegram Bot API](https://core.telegram.org/bots/api) with some tiny feature.
 
 ## Install
 
