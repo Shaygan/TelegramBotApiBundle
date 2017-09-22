@@ -31,8 +31,15 @@ class TelegramBotApi
 
     public function __call($name, $arguments)
     {
-        if ($this->config['legacy'] === true) {
+       if ($this->config['legacy'] === true) {
             call_user_method($name, $this->old_api, $arguments);
+        }
+        else{
+         	if(method_exists($this->telegram,$name)){
+        		return $this->telegram->$name(implode(',',$arguments));
+        	}else{
+        		return TGRequest::$name($arguments[0]);
+        	}
         }
     }
 
