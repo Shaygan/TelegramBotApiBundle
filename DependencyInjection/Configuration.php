@@ -13,8 +13,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('shaygan_telegram_bot_api');
+        $treeBuilder = new TreeBuilder('shaygan_telegram_bot_api');
+        $rootNode = $treeBuilder->getRootNode();
 
 
         $rootNode
