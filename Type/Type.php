@@ -8,7 +8,7 @@ abstract class Type implements TypeInterface
     /**
      * @param \stdClass $obj
      */
-    public function __construct(\stdClass $obj = null)
+    public function __construct(?\stdClass $obj = null)
     {
         if ($obj instanceof \stdClass) {
             $this->loadResult($obj);
